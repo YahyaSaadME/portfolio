@@ -1,5 +1,3 @@
-
-
 window.addEventListener("scroll",async()=>{
     let ratio = window.scrollY/window.innerHeight
     if(ratio>.1){
@@ -237,8 +235,8 @@ async function contact(){
 
         if (name==""|| email ==""||desc==""){
             document.getElementById("contact-notify").innerHTML = `
-            <div class="w-1/2 p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
-            Please fill the below 👇 details.
+            <div class="w-full p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+            Please fill the below 👆 details.
                 </div>
             `
             return 0;
@@ -255,13 +253,13 @@ async function contact(){
         if(res.sent){
             
             document.getElementById("contact-notify").innerHTML = `
-            <div class="w-1/2 p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+            <div class="w-full p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
             ${res.msg}
                 </div>
             `
         }else{
             document.getElementById("contact-notify").innerHTML = `
-            <div class="w-1/2 p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+            <div class="w-full p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
             ${res.msg}
                 </div>
             `
@@ -270,7 +268,7 @@ async function contact(){
     } 
     catch (error) {
         document.getElementById("contact-notify").innerHTML = `
-            <div class="w-1/2 p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+            <div class="w-full p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
             Oops 😓, something went wrong with server. 
                 </div>
             `
