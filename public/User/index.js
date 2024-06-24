@@ -2,6 +2,11 @@
 
 window.addEventListener("scroll",async()=>{
     let ratio = window.scrollY/window.innerHeight
+    if(ratio>.1){
+        document.getElementById("head-bouncer").style.opacity=0
+    }else{
+        document.getElementById("head-bouncer").style.opacity=1
+    }
     if(ratio>.8){
         document.getElementById("sec-front").style.position = "relative"
         document.getElementById("sec-1-bottxt").style.display = null
